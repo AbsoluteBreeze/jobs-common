@@ -151,7 +151,7 @@ header ul a:active {
   background-color:#f0f0f0;
 }
 
-strong {
+strong, .strong {
   color:#222;
   font-weight:700;
 }

@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <title>Jobs Common by JobBrander</title>
 
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/github-light.css">
+    <link rel="stylesheet" href="/stylesheets/styles.css">
+    <link rel="stylesheet" href="/stylesheets/github-light.css">
     <meta name="viewport" content="width=device-width">
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -15,56 +15,52 @@
   <body>
     <div class="wrapper">
 
-      <header id="header"></header>
+        <header id="header"></header>
 
-      <section id="body">
-        <h2>
-            <a id="about-the-project" className="anchor" href="#about-the-project" aria-hidden="true"><span className="octicon octicon-link"></span></a>
-            What is Jobs Common?
-        </h2>
-        <p>A few months ago I was playing around with several job board APIs when I realized that there was a huge lack of standardization in the way in which their APIs were written and accessed. Some of the problems I spotted right out of the gate were:</p>
+        <section id="body">
+            <h2>What is Jobs Common?</h2>
 
-        <ul>
-        <li>Every job board’s API demands different request parameters</li>
-        <li>Every API returns a different object type; some will only do XML, some JSON, and the names of fields can be just about anything</li>
-        <li>Some require API/Publisher keys</li>
-        <li>Some have libraries, some don’t; very few have good ones in PHP</li>
-        <li>Even if there are libraries, they still return non-standard results so you can’t compare one with another</li>
-        <li>Many of the PHP libraries are outdated, and don’t take advantage of stuff like Composer which makes it super easy to include in a project</li>
-        </ul>
+            <p class="strong">
+                We created this project to make it easy for PHP developers 
+                to access job board APIs.
+            </p>
 
-        <p>So, I created an early version of this project and <a href="http://www.karllhughes.com/2015/php-job-search-api-clients/">blogged about it</a> back in March, 2015. Steven Maguire saw the post and asked if I was interested in collaborating on a more mature version. Thanks to his well-crafted rewrite, we have what is here today.</p>
+            <p>
+                While there are tons of job boards that will give you access 
+                to their data, every one of them returns that data in its own
+                special way, making it hard to compare, store, or read
+                data from lots of job boards. We figured, "Why not give devs
+                one simple set of clients to access job board data?" And here we are.
+            </p>
+            
+            <h2>Providers</h2>
 
-        <p>Even though the code has improved significantly, the goal has remained the same: to provide PHP developers with a simple and standardized way to access job board APIs.</p>
+            <p>
+                We currently provide support for <strong>13 job boards</strong> 
+                including:
+            </p>
+            <div id="providersList"></div>
+            
+            <h4>Creating Your Own Provider</h4>
+            
+            <h2>Installation</h2>
+            
+            <h2>How to Use</h2>
+            
+            <h2>Contributing</h2>
+            
+            <h2>Contact/Support</h2>
+            
+            <p>
+                If you'd like help getting started or you're interested in 
+                hiring someone to help you implement any one of these job
+                board clients, contact me:
+            </p>
+            <p>Karl Hughes (<a href="mailto:khughes.me@gmail.com">Email</a> | <a href="https://www.twitter.com/karllhughes">Twitter</a>).</p>
+            
+        </section>
 
-        <h3>
-        <a id="providers" className="anchor" href="#providers" aria-hidden="true"><span className="octicon octicon-link"></span></a>Providers</h3>
-
-        <p>List of providers currently available:</p>
-
-        <ul>
-        <li><a href="https://github.com/JobBrander/jobs-simplyhired">SimplyHired</a></li>
-        <li><a href="https://github.com/JobBrander/jobs-indeed">Indeed</a></li>
-        <li><a href="https://github.com/JobBrander/jobs-careerbuilder">Careerbuilder</a></li>
-        <li><a href="https://github.com/JobBrander/jobs-dice">Dice</a></li>
-        <li><a href="https://github.com/JobBrander/jobs-govt">Government Jobs</a></li>
-        <li><a href="https://github.com/JobBrander/jobs-careercast">Careercast</a></li>
-        </ul>
-
-        <p>We have a long list of more providers we'd like to have someday. If you're interested in contributing, see below.</p>
-
-        <h3>
-        <a id="contributors" className="anchor" href="#contributors" aria-hidden="true"><span className="octicon octicon-link"></span></a>Contributors</h3>
-
-        <p>We welcome contributions, pull requests, issue submissions, and general feedback from anyone in the PHP community! Feel free to reach out to us or send an email to <a href="mailto:info@jobbrander.com">info@jobbrander.com</a>.</p>
-
-        <ul>
-        <li><a href="https://github.com/karllhughes" className="user-mention">@karllhughes</a></li>
-        <li><a href="https://github.com/stevenmaguire" className="user-mention">@stevenmaguire</a></li>
-        </ul>
-      </section>
-
-      <footer id="footer"></footer>
+        <footer id="footer"></footer>
 
     </div>
 
@@ -73,7 +69,7 @@
     <script src="/javascripts/react/react-dom.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
     <script type="text/babel" src="/javascripts/main.js"></script>
-    <script src="javascripts/scale.fix.js"></script>
+    <script src="/javascripts/scale.fix.js"></script>
     
   </body>
 </html>
