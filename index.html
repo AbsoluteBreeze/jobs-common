@@ -14,69 +14,65 @@
   </head>
   <body>
     <div class="wrapper">
-      <header>
-        <h1>Jobs Common</h1>
-        <p>Easily integrate job board APIs into your PHP application</p>
 
-        <p class="view"><a href="https://github.com/JobBrander/jobs-common">View the Project on GitHub <small>JobBrander/jobs-common</small></a></p>
+      <header id="header"></header>
 
+      <section id="body">
+        <h2>
+            <a id="about-the-project" class="anchor" href="#about-the-project" aria-hidden="true"><span class="octicon octicon-link"></span></a>
+            What is Jobs Common?
+        </h2>
+        <p>A few months ago I was playing around with several job board APIs when I realized that there was a huge lack of standardization in the way in which their APIs were written and accessed. Some of the problems I spotted right out of the gate were:</p>
 
         <ul>
-          <li><a href="https://github.com/JobBrander/jobs-common/zipball/master">Download <strong>ZIP File</strong></a></li>
-          <li><a href="https://github.com/JobBrander/jobs-common/tarball/master">Download <strong>TAR Ball</strong></a></li>
-          <li><a href="https://github.com/JobBrander/jobs-common">View On <strong>GitHub</strong></a></li>
+        <li>Every job board’s API demands different request parameters</li>
+        <li>Every API returns a different object type; some will only do XML, some JSON, and the names of fields can be just about anything</li>
+        <li>Some require API/Publisher keys</li>
+        <li>Some have libraries, some don’t; very few have good ones in PHP</li>
+        <li>Even if there are libraries, they still return non-standard results so you can’t compare one with another</li>
+        <li>Many of the PHP libraries are outdated, and don’t take advantage of stuff like Composer which makes it super easy to include in a project</li>
         </ul>
-      </header>
-      <section>
+
+        <p>So, I created an early version of this project and <a href="http://www.karllhughes.com/2015/php-job-search-api-clients/">blogged about it</a> back in March, 2015. Steven Maguire saw the post and asked if I was interested in collaborating on a more mature version. Thanks to his well-crafted rewrite, we have what is here today.</p>
+
+        <p>Even though the code has improved significantly, the goal has remained the same: to provide PHP developers with a simple and standardized way to access job board APIs.</p>
+
         <h3>
-<a id="about-the-project" class="anchor" href="#about-the-project" aria-hidden="true"><span class="octicon octicon-link"></span></a>About the project</h3>
+        <a id="providers" class="anchor" href="#providers" aria-hidden="true"><span class="octicon octicon-link"></span></a>Providers</h3>
 
-<p>A few months ago I was playing around with several job board APIs when I realized that there was a huge lack of standardization in the way in which their APIs were written and accessed. Some of the problems I spotted right out of the gate were:</p>
+        <p>List of providers currently available:</p>
 
-<ul>
-<li>Every job board’s API demands different request parameters</li>
-<li>Every API returns a different object type; some will only do XML, some JSON, and the names of fields can be just about anything</li>
-<li>Some require API/Publisher keys</li>
-<li>Some have libraries, some don’t; very few have good ones in PHP</li>
-<li>Even if there are libraries, they still return non-standard results so you can’t compare one with another</li>
-<li>Many of the PHP libraries are outdated, and don’t take advantage of stuff like Composer which makes it super easy to include in a project</li>
-</ul>
+        <ul>
+        <li><a href="https://github.com/JobBrander/jobs-simplyhired">SimplyHired</a></li>
+        <li><a href="https://github.com/JobBrander/jobs-indeed">Indeed</a></li>
+        <li><a href="https://github.com/JobBrander/jobs-careerbuilder">Careerbuilder</a></li>
+        <li><a href="https://github.com/JobBrander/jobs-dice">Dice</a></li>
+        <li><a href="https://github.com/JobBrander/jobs-govt">Government Jobs</a></li>
+        <li><a href="https://github.com/JobBrander/jobs-careercast">Careercast</a></li>
+        </ul>
 
-<p>So, I created an early version of this project and <a href="http://www.karllhughes.com/2015/php-job-search-api-clients/">blogged about it</a> back in March, 2015. Steven Maguire saw the post and asked if I was interested in collaborating on a more mature version. Thanks to his well-crafted rewrite, we have what is here today.</p>
+        <p>We have a long list of more providers we'd like to have someday. If you're interested in contributing, see below.</p>
 
-<p>Even though the code has improved significantly, the goal has remained the same: to provide PHP developers with a simple and standardized way to access job board APIs.</p>
+        <h3>
+        <a id="contributors" class="anchor" href="#contributors" aria-hidden="true"><span class="octicon octicon-link"></span></a>Contributors</h3>
 
-<h3>
-<a id="providers" class="anchor" href="#providers" aria-hidden="true"><span class="octicon octicon-link"></span></a>Providers</h3>
+        <p>We welcome contributions, pull requests, issue submissions, and general feedback from anyone in the PHP community! Feel free to reach out to us or send an email to <a href="mailto:info@jobbrander.com">info@jobbrander.com</a>.</p>
 
-<p>List of providers currently available:</p>
-
-<ul>
-<li><a href="https://github.com/JobBrander/jobs-simplyhired">SimplyHired</a></li>
-<li><a href="https://github.com/JobBrander/jobs-indeed">Indeed</a></li>
-<li><a href="https://github.com/JobBrander/jobs-careerbuilder">Careerbuilder</a></li>
-<li><a href="https://github.com/JobBrander/jobs-dice">Dice</a></li>
-<li><a href="https://github.com/JobBrander/jobs-govt">Government Jobs</a></li>
-<li><a href="https://github.com/JobBrander/jobs-careercast">Careercast</a></li>
-</ul>
-
-<p>We have a long list of more providers we'd like to have someday. If you're interested in contributing, see below.</p>
-
-<h3>
-<a id="contributors" class="anchor" href="#contributors" aria-hidden="true"><span class="octicon octicon-link"></span></a>Contributors</h3>
-
-<p>We welcome contributions, pull requests, issue submissions, and general feedback from anyone in the PHP community! Feel free to reach out to us or send an email to <a href="mailto:info@jobbrander.com">info@jobbrander.com</a>.</p>
-
-<ul>
-<li><a href="https://github.com/karllhughes" class="user-mention">@karllhughes</a></li>
-<li><a href="https://github.com/stevenmaguire" class="user-mention">@stevenmaguire</a></li>
-</ul>
+        <ul>
+        <li><a href="https://github.com/karllhughes" class="user-mention">@karllhughes</a></li>
+        <li><a href="https://github.com/stevenmaguire" class="user-mention">@stevenmaguire</a></li>
+        </ul>
       </section>
-      <footer>
-        <p>This project is maintained by <a href="https://github.com/JobBrander">JobBrander</a></p>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
-      </footer>
+
+      <footer id="footer"></footer>
+
     </div>
+
+    <!-- Include react for templating -->
+    <script src="/javascripts/react/react.min.js"></script>
+    <script src="/javascripts/react/react-dom.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
+    <script type="text/babel" src="/javascripts/main.js"></script>
     <script src="javascripts/scale.fix.js"></script>
     
   </body>
