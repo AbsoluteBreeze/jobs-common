@@ -18,21 +18,21 @@
         <header id="header"></header>
 
         <section id="body">
-            <h1>Indeed PHP API Client</h1>
+            <h1>Dice PHP API Client</h1>
             <p>
-                <a href="https://github.com/JobBrander/jobs-indeed" target="_blank">Github</a> |
-                <a href="https://packagist.org/packages/JobBrander/jobs-indeed" target="_blank">Packagist</a>
+                <a href="https://github.com/JobBrander/jobs-dice" target="_blank">Github</a> |
+                <a href="https://packagist.org/packages/JobBrander/jobs-dice" target="_blank">Packagist</a>
             </p>
             <p>
-                Use the Jobs Common Indeed Provider to connect your PHP application
-                with the Indeed job board API.
+                Use the Jobs Common Dice Provider to connect your PHP application
+                with the Dice job board API.
             </p>
 
             <h3>Installation</h3>
 
             <p>Use composer:</p>
 
-            <pre>composer require jobbrander/jobs-indeed</pre>
+            <pre>composer require jobbrander/jobs-dice</pre>
             
             <h3>Usage</h3>
             
@@ -40,10 +40,7 @@
                 Get the latest project manager jobs in Chicago:
             </p>
             <pre>
-$client = new JobBrander\Jobs\Client\Provider\Indeed([
-    'publisher' => 'YOUR INDEED PUBLISHER ID',
-    'format' => 'json',
-]);
+$client = new JobBrander\Jobs\Client\Provider\Dice;
 
 $jobs = $client->setKeyword('project manager')
     ->setCity('Chicago')
@@ -51,11 +48,11 @@ $jobs = $client->setKeyword('project manager')
             </pre>
 
             <p>For more detailed usage and documentation, see
-                <a href="https://github.com/JobBrander/jobs-indeed#usage" target="_blank">
+                <a href="https://github.com/JobBrander/jobs-dice#usage" target="_blank">
                 this project's readme</a>
             </p>
-            
-            <div id="demo" providerName="indeed"></div>
+
+            <div id="demo" providerName="dice"></div>
         </section>
 
         <footer id="footer"></footer>
