@@ -15,25 +15,6 @@ ReactDOM.render(
     document.getElementById('header')
 );
 
-// Render List of Providers
-ReactDOM.render(
-    <ul>
-        <li>
-            <a href="/providers/simplyhired.html">SimplyHired</a> | 
-            <a href="https://github.com/JobBrander/jobs-simplyhired">Github</a>
-        </li>
-        <li>
-            <a href="/providers/indeed.html">Indeed</a> | 
-            <a href="https://github.com/JobBrander/jobs-indeed">Github</a>
-        </li>
-        <li>
-            <a href="/providers/dice.html">Dice</a> | 
-            <a href="https://github.com/JobBrander/jobs-dice">Github</a>
-        </li>
-    </ul>,
-    document.getElementById('providersList')
-);
-
 // Render footer
 ReactDOM.render(
     <div>

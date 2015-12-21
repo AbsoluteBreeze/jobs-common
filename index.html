@@ -36,27 +36,135 @@
             <h2>Providers</h2>
 
             <p>
-                We currently provide support for <strong>13 job boards</strong> 
+                Each job board supported has a provider that extends this package's 
+                AbstractProvider, and implements the required abstract methods. We 
+                currently provide official support for <strong>13 job boards</strong> 
                 including:
             </p>
-            <div id="providersList"></div>
-            
-            <h4>Creating Your Own Provider</h4>
+            <table>
+                <thead>
+                <tr>
+                    <th>Docs</th>
+                    <th>Composer</th>
+                    <th>Maintainer</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td><a href="/providers/authentic.html">Authentic Jobs</a></td>
+                    <td>jobbrander/jobs-authenticjobs</td>
+                    <td><a href="https://github.com/stevenmaguire">Steven Maguire</a></td>
+                </tr>
+                <tr>
+                    <td><a href="/providers/careerbuilder.html">CareerBuilder</a></td>
+                    <td>jobbrander/jobs-careerbuilder</td>
+                    <td><a href="https://github.com/karllhughes">Karl Hughes</a></td>
+                </tr>
+                <tr>
+                    <td><a href="/providers/careercast.html">Careercast</a></td>
+                    <td>jobbrander/jobs-careercast</td>
+                    <td><a href="https://github.com/karllhughes">Karl Hughes</a></td>
+                </tr>
+                <tr>
+                    <td><a href="/providers/dice.html">Dice</a></td>
+                    <td>jobbrander/jobs-dice</td>
+                    <td><a href="https://github.com/karllhughes">Karl Hughes</a></td>
+                </tr>
+                <tr>
+                    <td><a href="/providers/elance.html">Elance</a></td>
+                    <td>jobbrander/jobs-elance</td>
+                    <td><a href="https://github.com/stevenmaguire">Steven Maguire</a></td>
+                </tr>
+                <tr>
+                    <td><a href="/providers/github.html">Github Jobs</a></td>
+                    <td>jobbrander/jobs-github</td>
+                    <td><a href="https://github.com/stevenmaguire">Steven Maguire</a></td>
+                </tr>
+                <tr>
+                    <td><a href="/providers/govt.html">Govt</a></td>
+                    <td>jobbrander/jobs-govt</td>
+                    <td><a href="https://github.com/karllhughes">Karl Hughes</a></td>
+                </tr>
+                <tr>
+                    <td><a href="/providers/indeed.html">Indeed</a></td>
+                    <td>jobbrander/jobs-indeed</td>
+                    <td><a href="https://github.com/stevenmaguire">Steven Maguire</a></td>
+                </tr>
+                <tr>
+                    <td><a href="/providers/jobs2careers.html">Jobs2Careers</a></td>
+                    <td>jobbrander/jobs-jobs2careers</td>
+                    <td><a href="https://github.com/karllhughes">Karl Hughes</a></td>
+                </tr>
+                <tr>
+                    <td><a href="/providers/muse.html">Muse</a></td>
+                    <td>jobbrander/jobs-muse</td>
+                    <td><a href="https://github.com/karllhughes">Karl Hughes</a></td>
+                </tr>
+                <tr>
+                    <td><a href="/providers/juju.html">JuJu</a></td>
+                    <td>jobbrander/jobs-juju</td>
+                    <td><a href="https://github.com/karllhughes">Karl Hughes</a></td>
+                </tr>
+                <tr>
+                    <td><a href="/providers/simplyhired.html">SimplyHired</a></td>
+                    <td>jobbrander/jobs-simplyhired</td>
+                    <td><a href="https://github.com/karllhughes">Karl Hughes</a></td>
+                </tr>
+                <tr>
+                    <td><a href="/providers/ziprecruiter.html">ZipRecruiter</a></td>
+                    <td>jobbrander/jobs-ziprecruiter</td>
+                    <td><a href="https://github.com/karllhughes">Karl Hughes</a></td>
+                </tr>
+                </tbody>
+            </table>
             
             <h2>Installation</h2>
             
+            <p>Via Composer</p>
+
+            <pre>$ composer require jobbrander/jobs-common</pre>
+            
             <h2>How to Use</h2>
             
+            <p>Usage varies by provider, but the basic pattern is:</p>
+            
+            <pre>
+$provider = new Provider([
+    'required_param' => XXXX,
+]);
+$jobs = $provider->setKeyword('search keyword')->getJobs();
+            </pre>
+            
+            <h2>Technical Details</h2>
+            <p>This package is compliant with PSR-1, PSR-2, PSR-4, and PSR-7.
+            We use <a href="https://github.com/guzzle/guzzle">Guzzle</a> as 
+            an HTTP Client.</p>
+
+            <p>The following versions of PHP are supported:</p>
+            
+            <ul>
+                <li>PHP 5.5</li>
+                <li>PHP 5.6</li>
+                <li>PHP 7.0</li>
+                <li>HHVM</li>
+            </ul>
+
             <h2>Contributing</h2>
+            
+            <p>Please see <a href="https://github.com/jobbrander/jobs-common/blob/master/CONTRIBUTING.md">CONTRIBUTING</a> for details.</p>
             
             <h2>Contact/Support</h2>
             
             <p>
                 If you'd like help getting started or you're interested in 
-                hiring someone to help you implement any one of these job
-                board clients, contact me:
+                finding a dev to help you implement any one of these job
+                board clients, contact us and we should be able to point
+                you in the right direction:
             </p>
-            <p>Karl Hughes (<a href="mailto:khughes.me@gmail.com">Email</a> | <a href="https://www.twitter.com/karllhughes">Twitter</a>).</p>
+            <ul>
+                <li>Karl Hughes (<a href="mailto:khughes.me@gmail.com">Email</a> | <a href="https://twitter.com/karllhughes">Twitter</a>).</li>
+                <li>Steven Maguire (<a href="mailto:stevenmaguire@gmail.com">Email</a> | <a href="https://twitter.com/stevenmaguire">Twitter</a>).</li>
+            </ul>
             
         </section>
 
