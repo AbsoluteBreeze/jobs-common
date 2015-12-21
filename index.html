@@ -33,7 +33,7 @@
                 one simple set of clients to access job board data?" And here we are.
             </p>
             
-            <h2>Providers</h2>
+            <h2 id="providers">Providers</h2>
 
             <p>
                 Each job board supported has a provider that extends this package's 
@@ -118,13 +118,13 @@
                 </tbody>
             </table>
             
-            <h2>Installation</h2>
+            <h2 id="installation">Installation</h2>
             
             <p>Via Composer</p>
 
             <pre>$ composer require jobbrander/jobs-common</pre>
             
-            <h2>How to Use</h2>
+            <h2 id="use">How to Use</h2>
             
             <p>Usage varies by provider, but the basic pattern is:</p>
             
@@ -135,7 +135,18 @@ $provider = new Provider([
 $jobs = $provider->setKeyword('search keyword')->getJobs();
             </pre>
             
-            <h2>Technical Details</h2>
+            <p>
+                Specific documentation is available for <a href="#providers">each provider</a>.
+            </p>
+            
+            <h2 id="demo">Demo</h2>
+            
+            <p>
+                If you're interested in a demo application, with use cases for several providers then
+                <a href="https://github.com/karllhughes/jobs-common-demo" target="_blank">check out this repo</a>.
+            </p>
+            
+            <h2 id="tech">Technical Details</h2>
             <p>This package is compliant with PSR-1, PSR-2, PSR-4, and PSR-7.
             We use <a href="https://github.com/guzzle/guzzle">Guzzle</a> as 
             an HTTP Client.</p>
@@ -149,11 +160,11 @@ $jobs = $provider->setKeyword('search keyword')->getJobs();
                 <li>HHVM</li>
             </ul>
 
-            <h2>Contributing</h2>
+            <h2 id="contributing">Contributing</h2>
             
             <p>Please see <a href="https://github.com/jobbrander/jobs-common/blob/master/CONTRIBUTING.md">CONTRIBUTING</a> for details.</p>
             
-            <h2>Contact/Support</h2>
+            <h2 id="contact">Contact/Support</h2>
             
             <p>
                 If you'd like help getting started or you're interested in 
@@ -164,6 +175,19 @@ $jobs = $provider->setKeyword('search keyword')->getJobs();
             <ul>
                 <li>Karl Hughes (<a href="mailto:khughes.me@gmail.com">Email</a> | <a href="https://twitter.com/karllhughes">Twitter</a>).</li>
                 <li>Steven Maguire (<a href="mailto:stevenmaguire@gmail.com">Email</a> | <a href="https://twitter.com/stevenmaguire">Twitter</a>).</li>
+            </ul>
+            
+            <hr/>
+
+            <h2 id="open-source">More Open Source Projects</h2>
+            
+            <p>Other open source projects for PHP developers that we contribute to:</p>
+
+            <ul>
+                <li><a href="https://github.com/JobBrander/moonclerk-php" target="_blank" rel="noreferrer">Moonclerk API PHP Client</a></li>
+                <li><a href="https://github.com/JobBrander/infoconnect-php-client" target="_blank" rel="noreferrer">Infoconnect API PHP Client</a></li>
+                <li><a href="https://github.com/betterweekdays/glassdoor" target="_blank" rel="noreferrer">Glassdoor API PHP Client by @betterweekdays</a></li>
+                <li><a href="https://github.com/Wisembly/clearbit-php" target="_blank" rel="noreferrer">Clearbit API PHP Client by @Wisembly</a></li>
             </ul>
             
         </section>
