@@ -1,9 +1,10 @@
+// Render header
 ReactDOM.render(
     <div>
-        <h1>Jobs Common</h1>
+        <h1><a href="#index">Jobs Common</a></h1>
         <p>Easily integrate job board APIs into your PHP application</p>
 
-        <p class="view"><a href="https://github.com/JobBrander/jobs-common">View the Project on GitHub <small>JobBrander/jobs-common</small></a></p>
+        <p className="view"><a href="https://github.com/JobBrander/jobs-common">View the Project on GitHub <small>JobBrander/jobs-common</small></a></p>
 
         <ul>
           <li><a href="https://github.com/JobBrander/jobs-common/zipball/master">Download <strong>ZIP File</strong></a></li>
@@ -14,6 +15,7 @@ ReactDOM.render(
     document.getElementById('header')
 );
 
+// Render footer
 ReactDOM.render(
     <div>
         <p>This project is maintained by <a href="https://github.com/JobBrander">JobBrander</a></p>
