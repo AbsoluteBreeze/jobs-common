@@ -31,8 +31,8 @@ var Footer = React.createClass({
   render: function() {
     return (
         <div>
-            <p>This project is maintained by <a href="https://github.com/JobBrander">JobBrander</a></p>
-            <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+            <p>This project is maintained by <a href="https://github.com/JobBrander">JobBrander</a>. See a problem with these docs? <a href="https://github.com/JobBrander/jobs-common/tree/gh-pages">Submit a Pull Request</a>.</p>
+            <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a>  &mdash; Built on <a href="https://facebook.github.io/react/">ReactJS</a></small></p>
         </div>
     );
   }
