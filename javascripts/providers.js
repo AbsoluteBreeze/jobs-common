@@ -2,7 +2,9 @@ var body = document.getElementById('body');
 var providerName = body.getAttribute("providerName");
 var demo = body.getAttribute("demo");
 var docsLink = body.getAttribute("docsLink");
-var example = document.getElementById('example').textContent;
+if (document.getElementById('example')) {
+    var example = document.getElementById('example').textContent;
+}
 
 // Repo/Packagist links
 var GithubLink = React.createClass({
