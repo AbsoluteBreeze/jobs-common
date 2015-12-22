@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Jobs Common by JobBrander</title>
+
+    <link rel="stylesheet" href="/stylesheets/styles.css">
+    <link rel="stylesheet" href="/stylesheets/github-light.css">
+    <meta name="viewport" content="width=device-width">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+
+        <header id="header"></header>
+
+        <section id="body" providerName="github" demo="true">
+            <h1>Github Jobs PHP API Client</h1>
+
+            <div id="links"></div>
+
+            <p>
+                Use the Jobs Common Github Jobs Provider to connect your PHP application
+                with the Github job board API.
+            </p>
+
+            <div id="example">
+$client = new JobBrander\Jobs\Client\Providers\Github;
+
+$jobs = $client->setKeyword('project manager')
+    ->setLocation('Chicago, IL')
+    ->getJobs();
+            </div>
+
+            <div id="installation"></div>
+            <div id="usage"></div>
+            <div id="demo"></div>
+
+        </section>
+
+        <footer id="footer"></footer>
+
+    </div>
+
+    <!-- Include react for templating -->
+    <script src="/javascripts/react/react.min.js"></script>
+    <script src="/javascripts/react/react-dom.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
+    <script type="text/babel" src="/javascripts/main.js"></script>
+    <script type="text/babel" src="/javascripts/providers.js"></script>
+    
+  </body>
+</html>
