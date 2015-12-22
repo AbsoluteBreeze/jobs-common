@@ -17,42 +17,31 @@
 
         <header id="header"></header>
 
-        <section id="body">
-            <h1>Indeed PHP API Client</h1>
+        <section id="body" providerName="indeed" demo="true">
+            <h1>Indeed Jobs PHP API Client</h1>
+
+            <div id="links"></div>
+
             <p>
-                <a href="https://github.com/JobBrander/jobs-indeed" target="_blank">Github</a> |
-                <a href="https://packagist.org/packages/JobBrander/jobs-indeed" target="_blank">Packagist</a>
-            </p>
-            <p>
-                Use the Jobs Common Indeed Provider to connect your PHP application
+                Use the Jobs Common Indeed Jobs Provider to connect your PHP application
                 with the Indeed job board API.
             </p>
 
-            <h3>Installation</h3>
-
-            <p>Use composer:</p>
-
-            <pre>composer require jobbrander/jobs-indeed</pre>
-            
-            <h3>Usage</h3>
-            
-            <p>
-                Get the latest project manager jobs in Chicago:
-            </p>
-            <pre>
-$client = new JobBrander\Jobs\Client\Provider\Indeed([
+            <div id="example">
+$client = new JobBrander\Jobs\Client\Providers\Indeed([
     'publisher' => 'YOUR INDEED PUBLISHER ID',
     'format' => 'json',
 ]);
 
 $jobs = $client->setKeyword('project manager')
     ->setCity('Chicago')
-    ->getJobs(); 
-            </pre>
+    ->getJobs();
+            </div>
 
-            <div id="usage" providerName="indeed"></div>
-            
-            <div id="demo" providerName="indeed"></div>
+            <div id="installation"></div>
+            <div id="usage"></div>
+            <div id="demo"></div>
+
         </section>
 
         <footer id="footer"></footer>
@@ -65,7 +54,6 @@ $jobs = $client->setKeyword('project manager')
     <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
     <script type="text/babel" src="/javascripts/main.js"></script>
     <script type="text/babel" src="/javascripts/providers.js"></script>
-    <script src="/javascripts/scale.fix.js"></script>
     
   </body>
 </html>

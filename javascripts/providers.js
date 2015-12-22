@@ -1,5 +1,6 @@
 var body = document.getElementById('body');
 var providerName = body.getAttribute("providerName");
+var demo = body.getAttribute("demo");
 var example = document.getElementById('example').textContent;
 
 // Repo/Packagist links
@@ -93,9 +94,9 @@ var DemoCode = React.createClass({
 var DemoContent = React.createClass({
   render: function() {
     var demoUrl = "http://demo.jobbrander.com/search/" + providerName;
-    if (demo == true) {
+    if (demo == "true") {
         return (
-            <p>See a demo and code sample at <a href={ demoUrl } target='_blank'>demo.jobbrander.com/{ providerName }</a>.</p>
+            <p>See a demo and code sample at <a href={ demoUrl } target='_blank'>demo.jobbrander.com/search/{ providerName }</a>.</p>
         );
     } else {
         return (

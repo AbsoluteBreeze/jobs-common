@@ -17,39 +17,28 @@
 
         <header id="header"></header>
 
-        <section id="body">
+        <section id="body" providerName="careercast" demo="true">
             <h1>Careercast PHP Client</h1>
-            <p>
-                <a href="https://github.com/JobBrander/jobs-careercast" target="_blank">Github</a> |
-                <a href="https://packagist.org/packages/JobBrander/jobs-careercast" target="_blank">Packagist</a>
-            </p>
+
+            <div id="links"></div>
+
             <p>
                 Use the Jobs Common Careercast Provider to connect your PHP application
                 with the Careercast job board RSS Feed.
             </p>
 
-            <h3>Installation</h3>
-
-            <p>Use composer:</p>
-
-            <pre>composer require jobbrander/jobs-careercast</pre>
-            
-            <h3>Usage</h3>
-            
-            <p>
-                Get the latest project manager jobs in Chicago:
-            </p>
-            <pre>
-$client = new JobBrander\Jobs\Client\Provider\Careercast;
+            <div id="example">
+$client = new JobBrander\Jobs\Client\Providers\Careercast;
 
 $jobs = $client->setKeyword('project manager')
     ->setLocation('Chicago, Illinois, United States')
     ->getJobs(); 
-            </pre>
+            </div>
 
-            <div id="usage" providerName="careercast"></div>
-            
-            <div id="demo" providerName="careercast"></div>
+            <div id="installation"></div>
+            <div id="usage"></div>
+            <div id="demo"></div>
+
         </section>
 
         <footer id="footer"></footer>
@@ -62,7 +51,6 @@ $jobs = $client->setKeyword('project manager')
     <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
     <script type="text/babel" src="/javascripts/main.js"></script>
     <script type="text/babel" src="/javascripts/providers.js"></script>
-    <script src="/javascripts/scale.fix.js"></script>
     
   </body>
 </html>

@@ -26,8 +26,9 @@
                 Use the Jobs Common Authentic Jobs Provider to connect your PHP application
                 with the Authentic job board API.
             </p>
+
             <div id="example">
-$client = new JobBrander\Jobs\Client\Provider\AuthenticJobs([
+$client = new JobBrander\Jobs\Client\Providers\AuthenticJobs([
     'key' => 'YOUR API KEY',
 ]);
 $jobs = $client->setKeyword('project manager')
