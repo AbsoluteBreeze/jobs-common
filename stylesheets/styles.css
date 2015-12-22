@@ -173,6 +173,11 @@ section {
   padding-bottom:50px;
 }
 
+#body #example {
+    display: none;
+    visibility: hidden;
+}
+
 small {
   font-size:11px;
 }
