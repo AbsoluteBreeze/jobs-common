@@ -32,6 +32,14 @@
                 data from lots of job boards. We figured, "Why not give devs
                 one simple set of clients to access job board data?" And here we are.
             </p>
+            <p>
+                In order to use this project, you just include the <a href="#providers">providers</a>
+                you want to use via <a href="">Composer</a>, and call the "getJobs()" method.
+                Each provider will give you a standard 
+                <a href="https://schema.org/JobPosting">schema.ort JobPosting object</a>, making it 
+                easy to compare results across job boards, store the data, or do your own
+                analysis.
+            </p>
             
             <h2 id="providers">Providers</h2>
 
@@ -40,6 +48,9 @@
                 <a href="https://github.com/JobBrander/jobs-common/blob/master/src/Providers/AbstractProvider.php">AbstractProvider</a>, 
                 and implements the required abstract methods. We 
                 currently provide official support for <strong>13 job board APIs</strong>.
+            </p>
+            <p>
+                Click on the name of a provider below to access examples and documentation.
             </p>
             
             <h3>Currently Supported</h3>
