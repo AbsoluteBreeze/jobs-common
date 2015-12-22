@@ -1,16 +1,47 @@
 var body = document.getElementById('body');
 var providerName = body.getAttribute("providerName");
 var demo = body.getAttribute("demo");
+var docsLink = body.getAttribute("docsLink");
 var example = document.getElementById('example').textContent;
 
 // Repo/Packagist links
-var RepoLinks = React.createClass({
+var GithubLink = React.createClass({
     render: function() {
         var githubLink = "https://github.com/JobBrander/jobs-" + providerName;
+        return (
+            <span><a href={githubLink} target="_blank">Github</a></span>
+        )
+    }
+});
+
+var PackagistLink = React.createClass({
+    render: function() {
         var packagistLink = "https://packagist.org/packages/JobBrander/jobs-" + providerName;
         return (
+            <span> | <a href={packagistLink} target="_blank">Packagist</a></span>
+        )
+    }
+});
+
+var DocsLink = React.createClass({
+    render: function() {
+        if (docsLink) {
+            return (
+                <span> | <a href={docsLink} target="_blank">API Docs</a></span>
+            )
+        } else {
+            return (<span></span>)
+        }
+    }
+});
+
+var RepoLinks = React.createClass({
+    render: function() {
+        return (
             <p>
-                <a href={githubLink} target="_blank">Github</a> | <a href={packagistLink} target="_blank">Packagist</a>
+                <GithubLink />
+                <PackagistLink />
+                <DocsLink />
             </p>
         )
     }
